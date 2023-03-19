@@ -6,11 +6,6 @@ html { box-sizing: border-box;}
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-/* font-family: 'Dancing Script', cursive;
-font-family: 'Itim', cursive;
-font-family: 'Parisienne', cursive;
-font-family: 'Roboto', sans-serif; */
-
 html {
     font-family: 'Roboto', sans-serif;
     background-color: #7d6200;
@@ -39,10 +34,12 @@ html {
     padding: 10px;
   }
   
-  .description {
+  .description,
+  .footerP {
     border: 1px solid black;
     background-color: #fff1bf;
-
+    display: inline-block;
+    padding: 10px;
   }
 
   img {

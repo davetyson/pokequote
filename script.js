@@ -6,10 +6,10 @@ const footerP = document.querySelector('.footerP');
 const h2 = document.createElement('h2');
 const h3 = document.createElement('h3');
 const img = document.createElement('img');
+
 // Pokemon image pull
 function getlength(number) {
     return digitCount = number.toString().length;
-    // console.log(digitCount);
 }
 
 // Quote pull
@@ -23,7 +23,7 @@ fetch("https://type.fit/api/quotes")
     const randomQuoteArray = Object.values(fullQuoteArray[random]);
     h2.textContent = randomQuoteArray[0];
     quoteBlock.append(h2);
-  });;
+  });
 
 // Pokemon pull
 
