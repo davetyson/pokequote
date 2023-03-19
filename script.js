@@ -22,7 +22,7 @@ fetch("https://type.fit/api/quotes")
     const fullQuoteArray = data;
     const random = Math.floor(Math.random() * fullQuoteArray.length);
     const randomQuoteArray = Object.values(fullQuoteArray[random]);
-    h2.textContent = randomQuoteArray[0];
+    h2.textContent = '"' + randomQuoteArray[0] + '"';
     quoteBlock.append(h2);
   });
 
