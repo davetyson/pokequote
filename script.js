@@ -33,16 +33,12 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
   })
   .then(function(data) {
     const fullPokemonArray = data;
-    console.log(data);
     let random = Math.floor(Math.random() * 151);
     const randomPokemonArray = Object.values(fullPokemonArray.results[random]);
     h3.textContent = ("- " + randomPokemonArray[0]);
     pokeBlock.append((h3));
-    console.log(random);
-    random = (random + 1);
-    console.log(random);
+    random++;
     getlength(random);
-    console.log(digitCount);
     if (digitCount === 1) {
         const pokeString = random.toString();
         const pokeImgNumber = '00' + pokeString;
@@ -67,7 +63,6 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
 footerYear = () => {
     let currentYear = new Date().getFullYear();
     footerP.innerHTML = `© Dave Tyson ${currentYear}`;
-    console.log(currentYear);
 };
 
 // Button to refresh the page
