@@ -44,17 +44,20 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
         const pokeImgNumber = '00' + pokeString;
         const imageUrl = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/" + pokeImgNumber + ".png";
         img.src = imageUrl;
+        img.alt = (randomPokemonArray[0] + " pokemon");
         figure.append(img);
     } else if (digitCount === 2) {
       const pokeString = random.toString();
       const pokeImgNumber = '0' + pokeString;
         const imageUrl = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/" + pokeImgNumber + ".png";
         img.src = imageUrl;
+        img.alt = (randomPokemonArray[0] + " pokemon");
         figure.append(img);
     } else {
         const pokeImgNumber = random;
         const imageUrl = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/" + pokeImgNumber + ".png";
         img.src = imageUrl;
+        img.alt = (randomPokemonArray[0] + " pokemon");
         figure.append(img);
     }
   });;
