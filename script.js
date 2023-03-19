@@ -39,8 +39,9 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
     h3.textContent = ("- " + randomPokemonArray[0]);
     pokeBlock.append((h3));
     console.log(random);
-    getlength(random);
     random = (random + 1);
+    getlength(random);
+
     if (digitCount === 1) {
         const pokeString = random.toString();
         const pokeImgNumber = '00' + pokeString;
