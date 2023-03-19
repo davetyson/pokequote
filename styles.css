@@ -42,6 +42,17 @@ html {
     padding: 10px;
   }
 
+  button {
+    font-family: 'Roboto', sans-serif;   
+    font-weight: 700;
+    background-color: #fff1bf; 
+    margin: 20px auto;
+    text-transform: none;
+    border: 3px solid black;
+    padding: 10px;
+    cursor: pointer;
+  }
+
   img {
     max-width: 100%;
     height: auto;

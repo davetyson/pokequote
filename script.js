@@ -3,6 +3,7 @@ const quoteBlock = document.querySelector('.quoteBlock');
 const pokeBlock = document.querySelector('.pokeBlock');
 const figure = document.querySelector('figure');
 const footerP = document.querySelector('.footerP');
+const button = document.querySelector('button');
 const h2 = document.createElement('h2');
 const h3 = document.createElement('h3');
 const img = document.createElement('img');
@@ -26,7 +27,6 @@ fetch("https://type.fit/api/quotes")
   });
 
 // Pokemon pull
-
 fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
   .then(function(response) {
     return response.json();
@@ -34,19 +34,22 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
   .then(function(data) {
     const fullPokemonArray = data;
     console.log(data);
-    const random = Math.floor(Math.random() * 151);
+    let random = Math.floor(Math.random() * 151);
     const randomPokemonArray = Object.values(fullPokemonArray.results[random]);
     h3.textContent = ("- " + randomPokemonArray[0]);
     pokeBlock.append((h3));
     console.log(random);
     getlength(random);
+    random = (random + 1);
     if (digitCount === 1) {
-        const pokeImgNumber = '00' + (random + 1);
+        const pokeString = random.toString();
+        const pokeImgNumber = '00' + pokeString;
         const imageUrl = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/" + pokeImgNumber + ".png";
         img.src = imageUrl;
         figure.append(img);
     } else if (digitCount === 2) {
-        const pokeImgNumber = '0' + (random + 1);
+      const pokeString = random.toString();
+      const pokeImgNumber = '0' + pokeString;
         const imageUrl = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/" + pokeImgNumber + ".png";
         img.src = imageUrl;
         figure.append(img);
@@ -65,7 +68,15 @@ footerYear = () => {
     console.log(currentYear);
 };
 
+// Button to refresh the page
+refreshPage = () => {
+  button.addEventListener('click', () => {
+    location.reload() 
+  })
+}
+
 footerYear();
+refreshPage();
 
 
 
