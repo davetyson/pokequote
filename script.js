@@ -40,8 +40,9 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
     pokeBlock.append((h3));
     console.log(random);
     random = (random + 1);
+    console.log(random);
     getlength(random);
-
+    console.log(digitCount);
     if (digitCount === 1) {
         const pokeString = random.toString();
         const pokeImgNumber = '00' + pokeString;
@@ -55,7 +56,7 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
         img.src = imageUrl;
         figure.append(img);
     } else {
-        const pokeImgNumber = (random + 1);
+        const pokeImgNumber = random;
         const imageUrl = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/" + pokeImgNumber + ".png";
         img.src = imageUrl;
         figure.append(img);
