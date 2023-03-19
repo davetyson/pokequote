@@ -45,7 +45,8 @@ html {
   button {
     font-family: 'Roboto', sans-serif;   
     font-weight: 700;
-    background-color: #fff1bf; 
+    background-color: #fff1bf;
+    color: black;
     margin: 20px auto;
     text-transform: none;
     border: 3px solid black;
