@@ -103,6 +103,7 @@ section h3 {
     font-family: 'Dancing Script', cursive;
     font-size: 2rem;
     text-transform: capitalize;
+    white-space: nowrap;
 }
 
 .footerP {
