@@ -96,3 +96,12 @@ section h3 {
 .footerP {
     font-weight: 700;
 }
+
+@media (max-width: 768px) {
+    body {
+        font-size: 100%;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
