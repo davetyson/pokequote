@@ -2,10 +2,10 @@
 const quoteBlock = document.querySelector('.quoteBlock');
 const pokeBlock = document.querySelector('.pokeBlock');
 const figure = document.querySelector('figure');
+const footerP = document.querySelector('.footerP');
 const h2 = document.createElement('h2');
 const h3 = document.createElement('h3');
 const img = document.createElement('img');
-
 // Pokemon image pull
 function getlength(number) {
     return digitCount = number.toString().length;
@@ -36,8 +36,8 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
     console.log(data);
     const random = Math.floor(Math.random() * 151);
     const randomPokemonArray = Object.values(fullPokemonArray.results[random]);
-    h3.textContent = randomPokemonArray[0];
-    pokeBlock.append(h3);
+    h3.textContent = ("- " + randomPokemonArray[0]);
+    pokeBlock.append((h3));
     console.log(random);
     getlength(random);
     if (digitCount === 1) {
@@ -57,6 +57,15 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=151&offset=0")
         figure.append(img);
     }
   });;
+
+  // Footer Year function
+footerYear = () => {
+    let currentYear = new Date().getFullYear();
+    footerP.innerHTML = `© Dave Tyson ${currentYear}`;
+    console.log(currentYear);
+};
+
+footerYear();
 
 
 
